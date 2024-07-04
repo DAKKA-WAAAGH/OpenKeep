@@ -159,6 +159,15 @@
 	M.add_nausea(50)
 	..()
 
+/datum/reagent/water/sea
+	taste_description = "salt"
+	color = "#3F717Fc6"
+
+/datum/reagent/water/sea/on_mob_life(mob/living/carbon/M)
+	M.adjustToxLoss(1)
+	M.add_nausea(50)
+	..()
+
 /*
  *	Water reaction to turf
  */

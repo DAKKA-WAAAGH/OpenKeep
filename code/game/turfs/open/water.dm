@@ -408,3 +408,18 @@
 	for(var/atom/movable/A in contents)
 		if((A.loc == src) && A.has_gravity())
 			A.ConveyorMove(dir)
+
+/turf/open/water/sea
+	name = "sea water"
+	desc = "The stuff of myths and legend."
+	icon = 'icons/turf/newwater.dmi'
+	icon_state = "together"
+	slowdown = 20
+	water_reagent = /datum/reagent/water/sea
+	water_level = 3
+	wash_in = TRUE
+	swim_skill = TRUE
+
+/turf/open/water/sea/Initialize()
+	dir = pick(GLOB.cardinals)
+	.  = ..()
