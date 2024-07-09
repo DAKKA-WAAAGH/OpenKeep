@@ -5,7 +5,10 @@
 	desc = ""
 	anchored = TRUE
 	density = FALSE
-	max_integrity = 12
+	max_integrity = 15
+	debris = list(/obj/item/natural/silk = 2)
+
+
 
 /obj/structure/spider/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	if(damage_type == BURN)//the stickiness of the web mutes all attack sounds except fire damage type
@@ -27,11 +30,19 @@
 
 /obj/structure/spider/stickyweb
 	name = "web"
-	icon = 'modular/Mapping/icons/webbing.dmi'
 	icon_state = "stickyweb1"
 	resistance_flags = FLAMMABLE
 	alpha = 109
 	opacity = TRUE
+
+/obj/structure/spider/stickyweb/Initialize()
+	if(prob(50))
+		icon_state = "stickyweb2"
+	dir = pick(GLOB.cardinals)
+	alpha = rand(80,109)
+//	animate(src, alpha = 0, loop = -1, time = rand(1,20), easing = BOUNCE_EASING, flags = ANIMATION_PARALLEL)
+//	animate(alpha = initial(alpha), time = rand(1,20))
+	. = ..()
 
 /obj/structure/spider/stickyweb/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover, /mob/living/simple_animal/hostile/poison/giant_spider))
@@ -209,9 +220,11 @@
 	name = "cocoon"
 	desc = ""
 	icon_state = "cocoon1"
-	max_integrity = 40
+	max_integrity = 60
 
-
+/obj/structure/spider/cocoon/Initialize()
+	icon_state = pick("cocoon1","cocoon2","cocoon3")
+	. = ..()
 
 /obj/structure/spider/cocoon/container_resist(mob/living/user)
 	var/breakout_time = 600

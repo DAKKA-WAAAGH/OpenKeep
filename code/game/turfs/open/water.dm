@@ -265,7 +265,7 @@
 	icon_state = "bathtileW"
 	water_level = 2
 	slowdown = 15
-	water_reagent = /datum/reagent/water
+	water_reagent = /datum/reagent/water/gross
 
 /turf/open/water/bath/Initialize()
 	.  = ..()

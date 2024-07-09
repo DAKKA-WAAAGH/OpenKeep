@@ -5,17 +5,17 @@
 
 /datum/stressevent/vice1
 	timer = 5 MINUTES
-	stressadd = 8
+	stressadd = 3
 	desc = list("<span class='red'>I don't indulge my vice.</span>","<span class='red'>I need to sate my vice.</span>")
 
 /datum/stressevent/vice2
 	timer = 5 MINUTES
-	stressadd = 10
+	stressadd = 5
 	desc = list("<span class='red'>I don't need it. I don't need it. I don't need it.</span>","<span class='red'>I'm better than my vices.</span>")
 
 /datum/stressevent/vice3
 	timer = 5 MINUTES
-	stressadd = 20
+	stressadd = 7
 	desc = list("<span class='red'>If I don't sate my desire soon, I am going to kill myself..</span>","<span class='red'>I need it. I need it. I need it.</span>")
 
 /*
@@ -63,7 +63,8 @@
 /datum/stressevent/dismembered
 	timer = 40 MINUTES
 	stressadd = 5
-	desc = "<span class='red'>I WAS USING THAT APPENDAGE!</span>"
+	//desc = "<span class='red'>I've lost a limb.</span>"
+	desc = null
 
 /datum/stressevent/dwarfshaved
 	timer = 40 MINUTES
@@ -82,10 +83,12 @@
 			return "<span class='red'>Another [H.dna.species.id] perished.</span>"
 	return desc
 
+
 /datum/stressevent/viewdismember
 	timer = 5 MINUTES
 	stressadd = 2
-	desc = "<span class='red'>I've seen men lose their limbs.</span>"
+	desc = "<span class='red'>I have seen combat</span>"
+
 
 /datum/stressevent/fviewdismember
 	timer = 1 MINUTES
@@ -110,7 +113,7 @@
 /datum/stressevent/freakout
 	timer = 15 SECONDS
 	stressadd = 2
-	desc = "<span class='red'>I'm panicking!</span>"
+	desc = "<span class='red'>I'm panicing!</span>"
 
 /datum/stressevent/felldown
 	timer = 1 MINUTES
@@ -192,27 +195,17 @@
 /datum/stressevent/parablood
 	timer = 15 SECONDS
 	stressadd = 3
-	desc = "<span class='red'>There is so much blood here... it's like a battlefield!</span>"
+	desc = "<span class='red'>There is so much blood here.. it's like a battlefield!</span>"
 
 /datum/stressevent/parastr
 	timer = 2 MINUTES
 	stressadd = 2
-	desc = "<span class='red'>That beast is stronger... and might easily kill me!</span>"
+	desc = "<span class='red'>That beast is stronger.. and might easily kill me!</span>"
 
 /datum/stressevent/paratalk
 	timer = 2 MINUTES
 	stressadd = 2
 	desc = "<span class='red'>They are plotting against me in evil tongues..</span>"
-
-/datum/stressevent/crowd
-	timer = 2 MINUTES
-	stressadd = 2
-	desc = "<span class='red'>Why is everyone here...? Are they trying to kill me?!</span>"
-
-/datum/stressevent/nopeople
-	timer = 2 MINUTES
-	stressadd = 2
-	desc = "<span class='red'>Where did everyone go? Did something happen?!</span>"
 
 /datum/stressevent/coldhead
 	timer = 60 SECONDS

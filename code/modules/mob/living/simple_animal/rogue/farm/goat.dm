@@ -54,7 +54,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/rogue/goat
 	icon = 'icons/roguetown/mob/monster/gote.dmi'
-	name = "gote"
+	name = "goat"
 	desc = ""
 	icon_state = "goat"
 	icon_living = "goat"
@@ -181,7 +181,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/rogue/goatmale
 	icon = 'icons/roguetown/mob/monster/gote.dmi'
-	name = "male gote"
+	name = "goat"
 	icon_state = "goatmale"
 	icon_living = "goatmale"
 	icon_dead = "goatmale_dead"
